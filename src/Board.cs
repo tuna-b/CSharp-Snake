@@ -1,3 +1,5 @@
+using System.IO.Compression;
+
 public class Board {
     private readonly int COLUMN;
     private readonly int ROW;
@@ -20,23 +22,50 @@ public class Board {
     public void initBoard() {
         for(int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUMN; j++) {
+                if (i == 0 || i == ROW - 1 || j == 0 || j == COLUMN - 1) {
+                    board[i][j] = new Coord(i, j, Coord.CoordType.BORDER);
+                } else {
                 board[i][j] = new Coord(i, j, Coord.CoordType.EMPTY);
+                }
             }
+        }
+    }
+    public void insertSnake(LinkedList<Coord> snakeParts) {
+        foreach(Coord snake in snakeParts) {
+            board[snake.Row][snake.Col].type = Coord.CoordType.SNAKE;
         }
     }
     public void displayBoard() {
         Console.WriteLine("Board:");
         for(int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUMN; j++) {
-                if (board[i][j].type == Coord.CoordType.EMPTY) {
-                    Console.Write(" . ");
-                } else if (board[i][j].type == Coord.CoordType.FOOD) {
-                    Console.Write(" x ");
-                } else if (board[i][j].type == Coord.CoordType.SNAKE) {
-                    Console.Write(" s ");
-                } else {
-                    Console.Write(" ? ");
+                switch (board[i][j].type) {
+                    case Coord.CoordType.FOOD:
+                        Console.Write(" x ");
+                        break;
+                    case Coord.CoordType.EMPTY:
+                        Console.Write("   ");
+                        break;
+                    case Coord.CoordType.SNAKE:
+                        Console.Write(" ~ ");
+                        break;
+                    case Coord.CoordType.BORDER:
+                        Console.Write(" # ");
+                        break;
+                    default:
+                        break;
                 }
+                // if (board[i][j].type == Coord.CoordType.EMPTY) {
+                //     Console.Write("   ");
+                // } else if (board[i][j].type == Coord.CoordType.FOOD) {
+                //     Console.Write(" x ");
+                // } else if (board[i][j].type == Coord.CoordType.SNAKE) {
+                //     Console.Write(" ~ ");
+                // } else if (board[i][j].type == Coord.CoordType.BORDER) {
+
+                // } else {
+                //     Console.Write(" ? ");
+                // }
             }
             Console.WriteLine("");
         }

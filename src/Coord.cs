@@ -14,7 +14,8 @@ public class Coord {
     public enum CoordType {
         FOOD,
         SNAKE,
-        EMPTY
+        EMPTY,
+        BORDER
     }
    
 }
