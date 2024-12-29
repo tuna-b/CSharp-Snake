@@ -15,7 +15,7 @@ public class Coord {
         FOOD,
         SNAKE,
         EMPTY,
-        BORDER
+        BORDER,
     }
    
 }

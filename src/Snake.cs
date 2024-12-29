@@ -7,7 +7,4 @@ class Snake {
         body = new LinkedList<Coord>();
         body.AddFirst(head);
     }    
-    public void grow() {
-        body.AddFirst(head);
-    }
 }

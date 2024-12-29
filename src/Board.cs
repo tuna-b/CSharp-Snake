@@ -36,12 +36,11 @@ public class Board {
         }
     }
     public void displayBoard() {
-        Console.WriteLine("Board:");
         for(int i = 0; i < ROW; i++) {
             for (int j = 0; j < COLUMN; j++) {
                 switch (board[i][j].type) {
                     case Coord.CoordType.FOOD:
-                        Console.Write(" x ");
+                        Console.Write(" o ");
                         break;
                     case Coord.CoordType.EMPTY:
                         Console.Write("   ");
@@ -55,17 +54,6 @@ public class Board {
                     default:
                         break;
                 }
-                // if (board[i][j].type == Coord.CoordType.EMPTY) {
-                //     Console.Write("   ");
-                // } else if (board[i][j].type == Coord.CoordType.FOOD) {
-                //     Console.Write(" x ");
-                // } else if (board[i][j].type == Coord.CoordType.SNAKE) {
-                //     Console.Write(" ~ ");
-                // } else if (board[i][j].type == Coord.CoordType.BORDER) {
-
-                // } else {
-                //     Console.Write(" ? ");
-                // }
             }
             Console.WriteLine("");
         }
