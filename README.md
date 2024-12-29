@@ -20,7 +20,6 @@ This is a console-based Snake game written in C#. It provides a simple and inter
 
 ## Screenshots
 
-*(Add screenshots of the game running in the console)*
 ![image](https://github.com/user-attachments/assets/3d9aac13-7d13-407a-a909-d2eb3956b97b)
 ![image](https://github.com/user-attachments/assets/6d387d3e-fde9-499e-a6ba-f375af34e226)
 ![image](https://github.com/user-attachments/assets/d19f882c-d31d-4d9c-a236-c41116e1e93e)
