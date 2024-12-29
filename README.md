@@ -20,9 +20,12 @@ This is a console-based Snake game written in C#. It provides a simple and inter
 
 ## Screenshots
 
-![image](https://github.com/user-attachments/assets/3d9aac13-7d13-407a-a909-d2eb3956b97b)
-![image](https://github.com/user-attachments/assets/6d387d3e-fde9-499e-a6ba-f375af34e226)
-![image](https://github.com/user-attachments/assets/d19f882c-d31d-4d9c-a236-c41116e1e93e)
+<img src="https://github.com/user-attachments/assets/c5fe413e-5a6b-49aa-8aba-923339927af4" alt="Image 1" width="200" height="200">
+<br>
+<img src="https://github.com/user-attachments/assets/fdd2c343-45b5-49f0-bfcc-128b6fe35028" alt="Image 2" height="200" width="200">
+<br>
+<img src="https://github.com/user-attachments/assets/3ba0150a-0065-4bc0-8885-a8cfe7f87ee4" alt="Image 3" width="200" height="200">
+
 
 ## Getting Started
 
@@ -34,7 +37,7 @@ This is a console-based Snake game written in C#. It provides a simple and inter
 
 1. Clone this repository:
    ```bash
-   git clone [<repository_url>](https://github.com/tuna-b/CSharp-Snake.git)
+   git clone <https://github.com/tuna-b/CSharp-Snake.git>
    cd <repository_directory>
    ```
 2. Build the project using the .NET CLI:
